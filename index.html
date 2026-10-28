@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="robots" content="noindex,nofollow"><meta name="description" content="Interactive presentation of the 201Lawyers Lawyer Connection dashboard. All records are fictional.">
+ <title>Lawyer Connection Demo | 201Lawyers</title>
+ <link rel="icon" href="data:,">
+ <link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="./demo.css">
+ <script type="module" src="./demo.mjs"></script>
+</head>
+<body>
+<a href="#main" class="skip">Skip to research</a>
+<div class="workspace">
+ <aside class="sidebar">
+  <a href="#main" class="brand">201<span>LAWYERS</span></a>
+  <div class="workspace-label">PRESENTATION WORKSPACE <span>01</span></div>
+  <nav aria-label="Workspace">
+   <a href="#main" class="nav-active">▦ <span>Lawyer connection</span></a>
+   <button id="sources-nav">◎ <span>Research sources</span></button>
+   <button id="method-nav">≋ <span>Ranking methodology</span></button>
+   <button id="guide-nav">↗ <span>Presentation guide</span></button>
+  </nav>
+  <div class="sidebar-bottom"><span class="private-dot"></span> Interactive demonstration<p>Independent research.<br>Human decisions.</p><button id="reset">Reset demonstration ↻</button></div>
+ </aside>
+ <div class="content">
+  <header class="topbar"><div>Research workspace <span>/</span> Lawyer connection</div><span class="pill">BUILD 01 · DEMO</span></header>
+  <main id="main" tabindex="-1">
+   <div class="page-heading"><div><span class="eyebrow">DISCOVER. DOCUMENT. CONNECT.</span><h1>Lawyer connection</h1><p>A considered shortlist starts with well-sourced research.</p></div><button id="guide" class="primary">Presentation guide</button></div>
+   <section class="market-panel" aria-label="Research market">
+    <div class="market-title"><span class="square-icon">⌖</span><div><strong>Research market</strong><small>The Bergen County pilot</small></div></div>
+    <label>State<select aria-label="State" disabled><option>New Jersey</option></select></label>
+    <label>County<select aria-label="County" disabled><option>Bergen</option></select></label>
+    <label>Practice area<select aria-label="Practice area" disabled><option>Divorce &amp; Family Law</option></select></label>
+    <label>Dataset<select aria-label="Dataset" disabled><option>Fictional demonstration</option></select></label>
+   </section>
+   <div class="banner amber">Presentation demo. All 30 attorneys and firms are fictional. No live research, license verification, or CRM connection.</div>
+   <section class="metrics" aria-label="Research summary">
+    <article><span>SAMPLE CANDIDATES</span><strong>30</strong><small>Fictional presentation records</small></article>
+    <article><span>OFFICIALLY VERIFIED</span><strong>0</strong><small>No real eligibility checks</small></article>
+    <article><span>PROVISIONAL SAMPLES</span><strong>30</strong><small>Illustrating the research workflow</small></article>
+    <article><span>SELECTED RECORDS</span><strong id="selected-metric">0</strong><small>Sample CSV download only</small></article>
+   </section>
+   <section class="research-panel">
+    <div class="panel-heading"><div><h2>Research shortlist <span id="loaded-count" class="count">10</span></h2><p>Sample research scores · <button class="text-button" id="method-link">How ranking works</button></p></div><div class="actions"><button id="refresh">↻ Refresh Rankings</button><button id="download-all" class="primary">Download all 30 samples</button></div></div>
+    <div class="status-line"><span class="status-dot"></span><span id="ranking-status">Sample snapshot · B01-BASE-1.0 · provisional research</span><span class="source-label">Fictional records · no live retrieval</span></div>
+    <div class="toolbar">
+     <label class="search-label">Search lawyers, firms, or towns<input id="search" type="search" placeholder="Search the sample shortlist..."></label>
+     <label>Sample contact<select id="filter"><option value="all">All contact states</option><option value="email">Sample email present</option><option value="missing">Sample email missing</option></select></label>
+     <label>Sort by<select id="sort"><option value="rank">Research rank</option><option value="name">Lawyer A to Z</option><option value="firm">Firm A to Z</option></select></label>
+    </div>
+    <div id="selection-bar" class="selection-bar" hidden><strong id="selection-count">0 selected</strong><button id="download-selected" class="primary">Download sample call list</button><span>Fictional data only. No CRM upload.</span><button id="clear" class="text-button">Clear selection</button></div>
+    <div class="table-scroll" tabindex="0" aria-label="Attorney results"><table><thead><tr><th><input id="select-all" type="checkbox" aria-label="Select all visible lawyers"></th><th>Rank</th><th>Movement</th><th>Lawyer / firm</th><th>Sample score</th><th>Evidence</th><th>Sample contact</th><th>Research status</th><th><span class="sr-only">Actions</span></th></tr></thead><tbody id="rows"></tbody></table></div>
+    <div id="empty" class="empty" hidden><h3>No sample records match.</h3><p>Try another name, firm, town, or contact filter.</p><button id="clear-filters">Clear filters</button></div>
+    <div class="table-footer"><span id="results-label" aria-live="polite">Showing 10 of 30 sample records</span><div class="actions"><button id="top" class="primary">Load Top 10</button><button id="next">Load Next 10 →</button></div></div>
+   </section>
+   <div class="bottom-grid">
+    <section class="info-card"><span class="eyebrow">RESEARCH INTEGRITY</span><h3>Evidence before outreach.</h3><p>Unknown facts remain unknown. Scores illustrate practice relevance and documented experience. Payment never influences research ranking.</p></section>
+    <section class="info-card"><span class="eyebrow">OWNER CONTROL</span><h3>Review, select, then prepare.</h3><p>Explore a record, add a temporary sample note, and download a fictional call list. This presentation does not contact anyone or create CRM records.</p></section>
+   </div>
+   <footer>201Lawyers · Operated by KEVNER LLC <span>Presentation demo / fictional data</span></footer>
+  </main>
+ </div>
+</div>
+<noscript><div class="banner amber">Enable JavaScript to use this interactive demonstration.</div></noscript>
+<div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+<dialog id="dialog" aria-labelledby="dialog-title"><div class="dialog-top"><h2 id="dialog-title" tabindex="-1"></h2><button id="dialog-close" aria-label="Close dialog">✕</button></div><div id="dialog-body"></div></dialog>
+</body></html>
